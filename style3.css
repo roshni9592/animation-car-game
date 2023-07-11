@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+h2{
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+    left:40%;
+    top: 10px;
+    text-transform: capitalize;
+    border: black solid;
+    color: gold;
+    background-color: black;
+    font-size: 30px;
+    
+}
+.main{
+    height:100vh;
+    width: 100%;
+    background-image: url(sky.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+}
+.road{
+    left:0;
+    right:0;
+    bottom: 0;
+    height:200px;
+    width: 900%;
+    display: block;
+    background-image: url(road.jpg);
+    background-repeat: repeat-x;
+    position: absolute;
+    z-index: 1;
+    
+    animation: road 3s linear infinite;
+}
+@keyframes road{
+    100%{
+        transform: translateX(-3400px);
+    }
+}
+
+.city{ 
+    height:250px;
+    width: 900%;
+    background-image: url(city.png);
+    background-repeat: repeat-x;
+    left:0;
+    right: 0;
+    bottom:200px;
+    display: block;
+    z-index: 2;
+    position: absolute;
+    animation: city 15s linear infinite;
+}
+@keyframes city{
+    100%{
+        transform: translateX(-1500px);
+    }
+}
+.car{
+    left:40%;
+    right: 0;
+    bottom:80px;
+    width: 400px;
+    transform: translateX(-50%);
+    z-index: 2;
+    position: absolute;
+    
+}
+.car img{
+     width: 100%;
+    animation: car 1s linear infinite;
+}
+
+@keyframes car {
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(1px);
+    }
+    0%{
+        transform: translateY(-1px);
+    }
+    
+}
+.wheels{
+   left:40%;
+   bottom: 170px;
+   position: absolute;
+   transform: translateX(-50%); 
+   z-index: 2;
+}
+.wheels img{
+height: 80px;
+width:80px;
+animation: wheels 1s linear infinite;
+ } 
+ 
+ .front-wheel{
+    left:80px;
+    position: absolute;
+
+
+ }
+ .back-wheel{
+left:-172px;
+position:absolute;
+ }
+ 
+@keyframes wheels{
+    100%{
+        transform: rotate(360deg);
+    }
+}
